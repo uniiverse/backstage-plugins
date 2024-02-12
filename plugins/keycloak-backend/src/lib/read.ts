@@ -136,6 +136,7 @@ export async function getEntities<T extends Users | Groups>(
         realm: config.realm,
         max: entityQuerySize,
         first: i * entityQuerySize,
+        briefRepresentation: true,
       }) as ReturnType<T['find']>,
   );
 
